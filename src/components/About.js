@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-export default function(props) {
+export default function About(props) {
     return (
         <div className='container' style={{color:props.mode==='dark'?'white':'black'}}>
         <h2>About Us</h2>
