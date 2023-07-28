@@ -30,6 +30,11 @@ export default function TextForm(props) {
         newText.style.fontStyle = 'italic';
         props.alert("Converted to italic text!", "success");
     }
+    const handleNormal = () => {
+        const newText = document.querySelector("#myText");
+        newText.style.fontStyle = 'normal';
+        props.alert("Converted to italic text!", "success");
+    }
     const handleRemoveExtraSpace = () => {
         const newText = text.split(/[ ]+/);
         setText(newText.join(" "))
@@ -53,6 +58,7 @@ export default function TextForm(props) {
                 <button disabled={text.length===0} className="btn btn-secondary m-1" onClick={handleLowercase}>Convert to LowerCase</button>
                 <button disabled={text.length===0} className="btn btn-secondary m-1" onClick={handleBold}>Convert to Bold</button>
                 <button disabled={text.length===0} className="btn btn-secondary m-1" onClick={handleItalic}>Convert to Italic</button>
+                <button disabled={text.length===0} className="btn btn-secondary m-1" onClick={handleNormal}>Convert to Normal</button>
                 <button disabled={text.length===0} className="btn btn-secondary m-1" onClick={handleRemoveExtraSpace}>Remove extra space</button>
                 <button disabled={text.length===0} className="btn btn-secondary m-1" onClick={handleCopy}>Copy all the text</button>
                 <button disabled={text.length===0} className="btn btn-secondary m-1" onClick={handleClear}>Clear Text</button>
