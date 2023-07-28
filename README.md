@@ -3,10 +3,10 @@ App that changes your text, paragraph based on your need.
 
 ### Picture of my Text Utils
 ### in Light mode
-![Text utils light mode](./image.png)
+![Text utils light mode](image.png)
 
 ### in Dark mode
-![Text utils dark mode](./image-1.png)
+![Text utils dark mode](image-1.png)
 
 
 ### `npm start`
