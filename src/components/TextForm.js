@@ -33,6 +33,7 @@ export default function TextForm(props) {
     const handleNormal = () => {
         const newText = document.querySelector("#myText");
         newText.style.fontStyle = 'normal';
+        newText.style.fontWeight = 'normal';
         props.alert("Converted to italic text!", "success");
     }
     const handleRemoveExtraSpace = () => {
@@ -41,10 +42,10 @@ export default function TextForm(props) {
         props.alert("Removed all extra spaces!", "success");
     }
     const handleCopy = () => {
-        const newText = document.querySelector("#myText");
-        newText.select();
-        navigator.clipboard.writeText(newText.value);   
-        document.getSelection().removeAllRanges();
+        // const newText = document.querySelector("#myText");
+        // newText.select();
+        navigator.clipboard.writeText(text);   
+        // document.getSelection().removeAllRanges();
         props.alert("Text copied!", "success");
     }
     return (
@@ -65,7 +66,7 @@ export default function TextForm(props) {
             </div>
             <div className="container mb-3" style={{color:props.mode==='dark'?'white':'black'}}>
                 <h2>Your text summary</h2>
-                <p>{text.split(" ").filter((ele) => {return ele.length !== 0}).length} words and {text.length} characters.</p>
+                <p>{text.split(/\s+/).filter((ele) => {return ele.length !== 0}).length} words and {text.length} characters.</p>
                 <p>{text.length>0?0.008 * text.split(" ").length:0} minutes to read it.</p>
                 <h2>Preview</h2>
                 <p>{text.length>0?text:'Enter something in textbox to preview here.'}</p>
