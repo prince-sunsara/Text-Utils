@@ -14,5 +14,5 @@ App that changes your text, paragraph based on your need.
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-#live demo
-![live demo](https://textutils-prince-sunsara.netlify.app/)
+# live demo
+https://textutils-prince-sunsara.netlify.app/
